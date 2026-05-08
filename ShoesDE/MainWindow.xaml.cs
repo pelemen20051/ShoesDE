@@ -33,7 +33,8 @@ namespace ShoesDE
             }
             else 
             {
-                CurrentSession.CurrentUser = user;
+                var NAMErole = user.Role != null ? user.Role.nameRole:"нет роли";
+                MessegeBox.Show($"ваша роль {NAMErole}")
                 new ProductWindow(user).Show();
                 Close();
 
